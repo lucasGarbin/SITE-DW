@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- cabeçudo -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/teste2.css">
+</head>
+
+<!-- corpytio -->
+
+<body>
+
+    <!-- cabeçalho -->
+    <header>
+        <img src="IMG/titulo.png" alt="Logo" class="logo">
+        <div class="titulo">
+            <h1>Cosinhando Juntos</h1>
+        </div>
+    </header>
+
+
+    <!-- Hero Section com Carrossel -->
+    <section class="hero" id="home">
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="IMG/pastel.jfif" alt="Pastel">
+                    <p>Pastel</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="IMG/coxinha.jpg" alt="Coxinha">
+                    <p>Coxinha</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="IMG/enroladinho_de_salsicha.jpg" alt="Enroladinho de Salsicha">
+                    <p>Enroladinho de Salsicha</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="IMG/download.jfif" alt="Quibe">
+                    <p>Quibe</p>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Categorias de Receitas -->
+    <section id="recipes">
+        <!-- Receitas mais buscadas -->
+        <h2>Receitas mais buscadas</h2>
+        <div class="recipe-cards">
+            <div class="card" onclick="showRecipe('Airfryer')">
+                <img src="IMG/airfryer.jpg" alt="Airfryer">
+                <p>airfryer</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_para_almoço_rapido')">
+                <img src="IMG/receitas_para_almoço_rapido.jpg" alt="Receitas para almoço rapido">
+                <p>receitas para almoço rapido</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_de_sobremesas_fáceis')">
+                <img src="IMG/receitas_faceis.jpg" alt="Receitas de sobremesas fáceis">
+                <p>Receitas de sobremesas fáceis</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_fit_e_saudáveis')">
+                <img src="IMG/receitas_fit_e_saldaveis.jpg" alt="Receitas fit e saudáveis">
+                <p>Receitas fit e saudáveis</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_para_almoço_de_domingo')">
+                <img src="IMG/receitas_para_almoço_de_domingo.jpg" alt="Receitas para almoço de domingo">
+                <p>Receitas para almoço de domingo</p>
+            </div>
+        </div>
+
+        <!-- Receitas Salgadas -->
+        <h2>Receitas Salgadas</h2>
+        <div class="recipe-cards">
+            <div class="card" onclick="showRecipe('pastel')">
+                <img src="IMG/pastel.jfif" alt="Pastel">
+                <p>Pastel</p>
+            </div>
+            <div class="card" onclick="showRecipe('coxinha')">
+                <img src="IMG/coxinha.jpg" alt="Coxinha">
+                <p>Coxinha</p>
+            </div>
+            <div class="card" onclick="showRecipe('enroladinho')">
+                <img src="IMG/enroladinho_de_salsicha.jpg" alt="Enroladinho de Salsicha">
+                <p>Enroladinho de Salsicha</p>
+            </div>
+            <div class="card" onclick="showRecipe('empada')">
+                <img src="IMG/empada.png" alt="Empada">
+                <p>Empada</p>
+            </div>
+            <div class="card" onclick="showRecipe('quibe')">
+                <img src="IMG/download.jfif" alt="Quibe">
+                <p>Quibe</p>
+            </div>
+        </div>
+
+        <!-- Receitas do Doces -->
+        <h2>Receitas Doces</h2>
+        <div class="recipe-cards">
+            <div class="card" onclick="showRecipe('Cupcake')">
+                <img src="IMG/Cupcake.jpg" alt="Cupcake">
+                <p>Cupcake</p>
+            </div>
+            <div class="card" onclick="showRecipe('bolo_de_fuba')">
+                <img src="IMG/bolo_de_fuba.png" alt="Bolo de Fubá">
+                <p>Bolo de Fubá</p>
+            </div>
+            <div class="card" onclick="showRecipe('bolo_de_banana')">
+                <img src="IMG/bolo_de_banana.jfif" alt="Bolo de Banana">
+                <p>Bolo de Banana</p>
+            </div>
+            <div class="card" onclick="showRecipe('bolo_de_chocolate')">
+                <img src="IMG/bolo_de_chocolate.jfif" alt="Bolo de Chocolate">
+                <p>Bolo de Chocolate</p>
+            </div>
+            <div class="card" onclick="showRecipe('pudim')">
+                <img src="IMG/pudin.jpg" alt="Pudim">
+                <p>Pudim</p>
+            </div>
+        </div>
+
+        <!-- Receitas Restritivas -->
+        <h2>Receitas Restritivas</h2>
+        <div class="recipe-cards">
+            <div class="card" onclick="showRecipe('Receitas_sem_lactose')">
+                <img src="IMG/leite - Copia.jpeg" alt="Receitas_sem_lactose">
+                <p>Receitas sem lactose</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_sem_glúten')">
+                <img src="IMG/li.png" alt="Receitas_sem_glúten">
+                <p>Receitas sem glúten</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_vegetarianas')">
+                <img src="IMG/carne.jfif" alt="Receitas_vegetarianas">
+                <p>Receitas vegetarianas</p>
+            </div>
+            <div class="card" onclick="showRecipe('Receitas_veganas')">
+                <img src="IMG/ovos.jfif" alt="Receitas_veganas">
+                <p>Receitas veganas</p>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item img-container">
+                <img src="IMG/Croaçã.jpg" alt="Descrição da Imagem">
+            </div>
+            <div class="grid-item text-container">
+                <h2>Ingredientes</h2>
+                <h3>Para a Massa:</h3>
+                <ul>
+                    <li>500g de farinha de trigo</li>
+                    <li>10g de sal</li>
+                    <li>50g de açúcar</li>
+                    <li>10g de fermento biológico seco</li>
+                    <li>300ml de água fria (ou leite)</li>
+                    <li>40g de manteiga derretida</li><br><br>
+                </ul>
+
+                <h3>Para a Manteiga:</h3>
+                <ul>
+                    <li>250g de manteiga sem sal (mole, mas ainda firme)</li><br><br>
+                </ul>
+
+                <h2>Passo a Passo</h2>
+                <h3>1. Preparar a Massa:</h3>
+                <ul>
+                    <li>Em uma tigela grande, misture a farinha, o sal e o açúcar.</li>
+                    <li>Em outra tigela, dissolva o fermento na água ou leite. Deixe descansar por alguns minutos.</li>
+                    <li>Adicione a mistura de fermento à farinha e misture até formar uma massa.</li>
+                    <li>Adicione a manteiga derretida e sove a massa por cerca de 10 minutos, até que fique lisa e
+                        elástica.</li>
+                    <li>Deixe a massa descansar por cerca de 1 hora, coberta com um pano, até que dobre de tamanho.</li><br><br>
+                </ul>
+
+                <h3>2. Preparar a Manteiga:</h3>
+                <ul>
+                    <li>Coloque a manteiga entre duas folhas de papel manteiga e use um rolo para achatar até formar um
+                        retângulo de cerca de 1 cm de espessura.</li>
+                    <li>Coloque a manteiga na geladeira para que fique firme novamente.</li><br><br>
+                </ul>
+
+                <h3>3. Incorporar a Manteiga:</h3>
+                <ul>
+                    <li>Após a massa descansar, coloque-a em uma superfície enfarinhada e forme um retângulo.</li>
+                    <li>Coloque o retângulo de manteiga no centro da massa.</li>
+                    <li>Dobre as bordas da massa sobre a manteiga, envolvendo-a completamente.</li><br><br>
+                </ul>
+
+                <h3>4. Dobrando a Massa (Laminação):</h3>
+                <ul>
+                    <li>Com um rolo, abra a massa em um retângulo longo (cerca de 60 cm x 20 cm).</li>
+                    <li>Dobre a massa em três partes, como uma carta. Isso é chamado de "dobramento simples".</li>
+                    <li>Deixe a massa descansar na geladeira por 30 minutos.</li>
+                    <li>Repita o processo de abrir e dobrar a massa mais duas vezes (totalizando três dobramentos).</li><br><br>
+                </ul>
+
+                <h3>5. Modelar os Croissants:</h3>
+                <ul>
+                    <li>Apos os dobramentos, abra a massa em um retângulo grande e fino.</li>
+                    <li>Corte a massa em triângulos (cerca de 10 cm de base).</li>
+                    <li>Começando pela base do triângulo, enrole a massa até a ponta, formando o croissant.</li>
+                    <li>Coloque os croissants em uma assadeira forrada com papel manteiga.</li><br><br>
+                </ul>
+
+                <h3>6. Fermentar:</h3>
+                <ul>
+                    <li>Deixe os croissants descansarem em um local morno por cerca de 1-2 horas, ou até que tenham
+                        dobrado de tamanho.</li><br><br>
+                </ul>
+
+                <h3>7. Assar:</h3>
+                <ul>
+                    <li>Pré-aqueça o forno a 200°C.</li>
+                    <li>Se desejar, pincele os croissants com uma mistura de gema de ovo e água para um acabamento
+                        brilhante.</li>
+                    <li>Asse por cerca de 15-20 minutos, ou até que estejam dourados e crocantes.</li><br><br>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item img-container">
+                <img src="IMG/receitas_de_jantar.jpg" alt="Descrição da Imagem">
+            </div>
+            <div class="grid-item text-container">
+                <h2>Ingredientes</h2>
+                <h3>Para a Carnita:</h3>
+                <ul>
+                    <li>1 kg de carne de porco (ombro ou paleta)</li>
+                    <li>2 colheres de sopa de óleo</li>
+                    <li>1 cebola grande, cortada em quartos</li>
+                    <li>4 dentes de alho, picados</li>
+                    <li>1 colher de chá de cominho em pó</li>
+                    <li>1 colher de chá de orégano seco</li>
+                    <li>Sal e pimenta a gosto</li>
+                    <li>1 laranja (suco e casca)</li>
+                    <li>1 folha de louro</li><br><br>
+                </ul>
+
+                <h3>Para Montar os Tacos:</h3>
+                <ul>
+                    <li>Tortilhas de milho ou trigo</li>
+                    <li>Cebola picada</li>
+                    <li>Coentro fresco picado</li>
+                    <li>Limão (cortado em gomos)</li>
+                </ul>
+
+                <h2>Modo de Preparo</h2>
+                <ol>
+                    <li>
+                        <strong>Preparar a Carne:</strong>
+                        Aqueça o óleo em uma panela grande em fogo médio-alto. Adicione a carne de porco e doure todos
+                        os lados. Adicione a cebola, o alho, o cominho, o orégano, sal, pimenta, o suco da laranja, a
+                        casca da laranja e a folha de louro. Cubra a carne com água (aproximadamente 500 ml) e deixe
+                        cozinhar em fogo baixo por cerca de 2 a 3 horas, até que a carne esteja macia e se desfaça
+                        facilmente.
+                    </li>
+                    <li>
+                        <strong>Desfiar a Carne:</strong>
+                        Retire a carne da panela e desfie com um garfo. Reserve.
+                    </li>
+                    <li>
+                        <strong>Tostar a Carne (opcional):</strong>
+                        Em uma frigideira grande, adicione a carne desfiada e frite por alguns minutos para deixar as
+                        bordas crocantes.
+                    </li>
+                    <li>
+                        <strong>Montar os Tacos:</strong>
+                        Aqueça as tortilhas em uma frigideira ou no micro-ondas. Coloque uma porção de carne desfiada em
+                        cada tortilha. Adicione cebola picada e coentro fresco a gosto. Sirva com gomos de limão ao
+                        lado.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="nao_maguento_mais">
+                <div class="small-images">
+                    <img src="IMG/donuts.jfif" alt="Imagem 1">
+                    <img src="IMG/macarrao.jfif" alt="Imagem 2">
+                    <img src="IMG/lasanha.jfif" alt="Imagem 3">
+                    <img src="IMG/pamonha.jfif" alt="Imagem 4">
+                </div>
+                <div class="large-image">
+                    <img src="IMG/burger.jfif" alt="Imagem Grande">
+                </div>
+            </div>
+
+            <!-- Receita Expandida -->
+            <div id="recipe-display" class="recipe-display hidden">
+                <button class="close-btn" onclick="closeRecipe()">X</button>
+                <h2 id="recipe-title"></h2>
+                <p id="recipe-content"></p>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="IMG/download.png" alt="Instituto Federal Catarinense" class="footer-logo">
+                <img src="IMG/titulo.png" alt="Instituto Federal Catarinense" class="footer-logo">
+                <p><strong>Sobre mim:</strong><br> Meu nome é Lucas, sou o desenvolvedor do site, estou no primeiro ano
+                    do Ensino Médio
+                    e estudo no Instituto Federal Catarinense.</p>
+            </div>
+            <div class="footer-right">
+                <p><strong>Escola:</strong><br>
+                    <a href="https://ingresso.ifc.edu.br">https://ingresso.ifc.edu.br</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- sobre o javascript o chat gpt fezuma boa parte pra mim pois eu nao sei fazer um carrossel e ele fez o link de baixo pra puder funfa -->
+    <script src="Js/teste1.js"></script>
+</body>
+
+</html>
