@@ -1,0 +1,21 @@
+<!-- 14) Elaborar um programa que leia o salário bruto de um funcionário e calcule o salário líquido.
+Considere descontos de 10% para imposto e 5% para previdência social.
+Exemplo:
+Salário bruto: R$: 3000.00
+Desconto imposto: R$: 300.00
+Desconto previdência: R$: 150.00
+Salário líquido: R$: 2550.00 -->
+<script>
+    let salarioBruto = Number(prompt("Salário bruto: "));
+
+    let descontoImposto = salarioBruto * 0.10;
+    let descontoPrevidencia = salarioBruto * 0.05;
+
+    let salarioLiquido = salarioBruto - descontoImposto - descontoPrevidencia;
+
+    alert(`Salário bruto: ${salarioBruto.toFixed(2)}`);
+    alert(`Desconto imposto: ${descontoImposto.toFixed(2)}`);
+    alert(`Desconto previdência: ${descontoPrevidencia.toFixed(2)}`);
+    alert(`Salário líquido: ${salarioLiquido.toFixed(2)}`);
+</script>
+    <!-- eu usei o $ vc usa ele so pra colocar expressoes mas faceis dentrod e uma string se eu n usei nesse eu usei em outro -->

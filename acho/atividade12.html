@@ -1,0 +1,29 @@
+<!-- 12) Elaborar um programa que leia a largura e a altura de um retângulo e calcule sua área e seu
+perímetro.
+Exemplo:
+Largura: 5.00m
+Altura: 3.00m
+Área: 15.00m2
+Perímetro: 16.00m -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+
+<body>
+    <!-- eu usei o $ vc usa ele so pra colocar expressoes mas faceis dentrod e uma string se eu n usei nesse eu usei em outro -->
+    <script>
+        let largura = Number(prompt("Informe a largura do retângulo (em metros):"));
+        let altura = Number(prompt("Informe a altura do retângulo (em metros):"));
+        let area = largura * altura;
+        let perimetro = 2 * (largura + altura);
+        alert("Largura: " + largura.toFixed(2) + "m\n" + "Altura: " + altura.toFixed(2) + "m\n" + "Área: " + area.toFixed(2) + "m²\n" + "Perímetro: " + perimetro.toFixed(2) + "m");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!-- 5) Elaborar um programa que leia o preço de um produto e a quantidade desejada pelo cliente.
+Calcule e informe o valor total sem desconto e com desconto de 5% se a quantidade for superior a
+10 unidades.
+Exemplo:
+Preço unitário R$: 20.00
+Quantidade: 12
+Total sem desconto: R$: 240.00
+Total com desconto: R$: 228.00 -->
+<script>
+    let preco = prompt("preco: ");
+    let quantidade = prompt("quantidade: ");
+    let total = preco * quantidade;
+
+    if (quantidade > 10){
+        let final = preco * quantidade;
+        let desconto = final * 0.05;
+        let finalizado = final - desconto;
+        alert("total do preço com desconto: " + final.toFixed(2));
+    }
+
+    else{
+        alert("total sem desconto: " + total.toFixed(2));
+    }
+</script>
